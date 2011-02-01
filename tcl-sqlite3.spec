@@ -1,5 +1,5 @@
 %define realname sqlite
-%define realver 3070400
+%define realver 3070500
 %define rpmver %(echo %{realver}|sed -e "s/00//g" -e "s/0/./g")
 
 Summary:	Tcl binding for sqlite3
@@ -11,7 +11,7 @@ Group:		Databases
 URL:		http://www.sqlite.org/
 Source0:	http://www.sqlite.org/%{realname}-tea-%{realver}.tar.gz
 Patch0:		sqlite-tea-3070400-link.patch
-BuildRequires:	sqlite3-devel >= %rpmver
+BuildRequires:	sqlite3-devel >= 3.7.4
 BuildRequires:	tcl-devel
 BuildRequires:	tcl
 Provides:	sqltie3-tcl = %version
