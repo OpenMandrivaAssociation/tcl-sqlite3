@@ -1,17 +1,17 @@
 %define realname sqlite
-%define realver 3070500
+%define realver 3070601
 %define rpmver %(echo %{realver}|sed -e "s/00//g" -e "s/0/./g")
 
 Summary:	Tcl binding for sqlite3
 Name:		tcl-sqlite3
 Version:	%rpmver
-Release:	%mkrel 2
+Release:	%mkrel 1
 License:	Public Domain
 Group:		Databases
 URL:		http://www.sqlite.org/
-Source0:	http://www.sqlite.org/%{realname}-tea-%{realver}.tar.gz
+Source0:	http://www.sqlite.org/%{realname}-autoconf-%{realver}.tar.gz
 Patch0:		sqlite-tea-3070400-link.patch
-BuildRequires:	sqlite3-devel >= 3.7.4
+BuildRequires:	sqlite3-devel >= %{rpmver}
 BuildRequires:	tcl-devel
 BuildRequires:	tcl
 Provides:	sqltie3-tcl = %version
@@ -28,7 +28,7 @@ which serves as an example of how to use the SQLite library.
 This package contains tcl binding for %{name}.
 
 %prep
-%setup -q -n %{realname}-tea-%{realver}
+%setup -q -n %{realname}-autoconf-%{realver}/tea
 %patch0 -p0
 
 %build
