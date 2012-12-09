@@ -5,7 +5,7 @@
 Summary:	Tcl binding for sqlite3
 Name:		tcl-sqlite3
 Version:	%rpmver
-Release:	%mkrel 1
+Release:	%mkrel 3
 License:	Public Domain
 Group:		Databases
 URL:		http://www.sqlite.org/
@@ -47,3 +47,32 @@ rm -rf %{buildroot}
 %files
 %defattr(-,root,root)
 %{tcl_sitearch}/sqlite3
+
+
+%changelog
+* Sat Jun 25 2011 Funda Wang <fwang@mandriva.org> 3.7.7-1mdv2011.0
++ Revision: 687072
+- new version 3.7.7
+
+* Fri May 20 2011 Funda Wang <fwang@mandriva.org> 3.7.6.3-1
++ Revision: 676385
+- 3.7.6.3
+
+* Mon Apr 18 2011 Funda Wang <fwang@mandriva.org> 3.7.6.2-1
++ Revision: 655054
+- new version 3.7.6.2
+- new version 3.7.6.1
+
+* Sat Feb 26 2011 Funda Wang <fwang@mandriva.org> 3.7.5-2
++ Revision: 640008
+- rebuild
+
+* Tue Feb 01 2011 Funda Wang <fwang@mandriva.org> 3.7.5-1
++ Revision: 634592
+- new version 3.7.5
+
+* Wed Jan 26 2011 Funda Wang <fwang@mandriva.org> 3.7.4-1
++ Revision: 632886
+- New version 3.7.4
+- Created package structure for tcl-sqlite3.
+
