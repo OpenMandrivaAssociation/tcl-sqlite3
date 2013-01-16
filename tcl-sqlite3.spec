@@ -5,17 +5,16 @@
 Summary:	Tcl binding for sqlite3
 Name:		tcl-sqlite3
 Version:	%rpmver
-Release:	%mkrel 3
+Release:	4
 License:	Public Domain
 Group:		Databases
 URL:		http://www.sqlite.org/
 Source0:	http://www.sqlite.org/%{realname}-autoconf-%{realver}.tar.gz
 Patch0:		sqlite-tea-3070400-link.patch
-BuildRequires:	sqlite3-devel >= %{rpmver}
+BuildRequires:	pkgconfig(sqlite3) >= %{rpmver}
 BuildRequires:	tcl-devel
 BuildRequires:	tcl
 Provides:	sqltie3-tcl = %version
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 SQLite is a C library that implements an embeddable SQL database
@@ -36,16 +35,11 @@ This package contains tcl binding for %{name}.
 %make
 
 %install
-rm -rf %{buildroot}
 mkdir -p %{buildroot}%{tcl_sitearch}/sqlite3
 install -m755 *.so %{buildroot}%{tcl_sitearch}/sqlite3/
 install -m644 pkgIndex.tcl %{buildroot}%{tcl_sitearch}/sqlite3/
 
-%clean
-rm -rf %{buildroot}
-
 %files
-%defattr(-,root,root)
 %{tcl_sitearch}/sqlite3
 
 
