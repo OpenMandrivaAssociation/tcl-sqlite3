@@ -5,7 +5,7 @@
 Summary:	Tcl binding for sqlite3
 Name:		tcl-sqlite3
 Version:	%rpmver
-Release:	14
+Release:	15
 License:	Public Domain
 Group:		Databases
 URL:		http://www.sqlite.org/
