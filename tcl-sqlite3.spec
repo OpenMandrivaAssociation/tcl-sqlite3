@@ -8,7 +8,7 @@ Version:	%rpmver
 Release:	15
 License:	Public Domain
 Group:		Databases
-URL:		http://www.sqlite.org/
+URL:		https://www.sqlite.org/
 Source0:	http://www.sqlite.org/%{realname}-autoconf-%{realver}.tar.gz
 Patch0:		sqlite-tea-3070400-link.patch
 BuildRequires:	pkgconfig(sqlite3) >= %{rpmver}
