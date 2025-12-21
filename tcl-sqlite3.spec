@@ -11,6 +11,11 @@ Group:		Databases
 URL:		https://www.sqlite.org/
 Source0:	http://www.sqlite.org/%{realname}-autoconf-%{realver}.tar.gz
 Patch0:		sqlite-tea-3070400-link.patch
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	pkgconfig(sqlite3) >= %{rpmver}
 BuildRequires:	tcl-devel
 BuildRequires:	tcl
